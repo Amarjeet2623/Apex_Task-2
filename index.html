@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>InstaTask - Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png" alt="Logo" />
+      <span>Apex</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#form-section">Register</a></li>
+      <li><a href="#dynamic-section">Manage Tasks</a></li>
+    </ul>
+  </nav>
+
+  <main class="container">
+    <section id="form-section" class="form-area">
+      <h2>Register Yourself</h2>
+      <form id="contactForm">
+        <div class="input-group">
+          <input type="text" id="name" required placeholder=" ">
+          <label for="name">Full Name</label>
+        </div>
+        <div class="input-group">
+          <input type="email" id="email" required placeholder=" ">
+          <label for="email">Email Address</label>
+        </div>
+        <div class="input-group">
+          <input type="text" id="profession" required placeholder=" ">
+          <label for="profession">Profession</label>
+        </div>
+        <div class="input-group">
+          <input type="number" id="age" required placeholder=" ">
+          <label for="age">Age</label>
+        </div>
+        <div class="input-group">
+          <input type="text" id="regno" required placeholder=" ">
+          <label for="regno">Registration No</label>
+        </div>
+        <div class="input-group">
+          <select id="gender" required>
+            <option value="" disabled selected>Choose Gender</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+
+      <div id="submittedProfiles" class="profiles"></div>
+    </section>
+
+    <section id="dynamic-section" class="dynamic-area">
+      <h2>Task Manager</h2>
+      <div class="todo-controls">
+        <input type="text" id="taskNo" placeholder="Task No">
+        <input type="text" id="taskName" placeholder="Task Name">
+        <button onclick="addTask()">Add Task</button>
+      </div>
+      <div id="taskCards" class="cards-area"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
